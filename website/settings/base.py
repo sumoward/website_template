@@ -6,7 +6,7 @@ here = lambda * x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 PROJECT_ROOT = here("..")
 root = lambda * x: os.path.join(os.path.abspath(PROJECT_ROOT), *x)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -15,6 +15,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# #comment out for local testing
 # DATABASES = {
 #     'default': dj_database_url.config()
 # }
@@ -125,11 +126,12 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    #'south',
+    'south',
 )
 
 LOCAL_APPS = (
     'website',
+    'psl'
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
