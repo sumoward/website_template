@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'microblog.views.home', name='home'),
     # url(r'^microblog/', include('microblog.foo.urls')),
     url(r"^$", views.HomepageView.as_view(), name="home"),
-    url(r"^blog/", include("website.urls", namespace="website")),
+    url(r"^whitepaper/", include("psl.urls", namespace="whitepaper")),
 
     url(r'^admin/', include(admin.site.urls)),
 )

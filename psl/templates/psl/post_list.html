@@ -1,0 +1,16 @@
+{% extends "_layouts/base.html" %}
+{% load url from future %}
+
+{% block page_title %}White Papers | {% endblock %}
+
+{% block page_content %}
+<h2>White Papers</h2>
+
+<ul>
+    {% for post in post_list %}
+    <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+    {% empty %}
+    <li>Sorry, no White papers yet. Check back soon!</li>
+    {% endfor %}
+</ul>
+{% endblock %}

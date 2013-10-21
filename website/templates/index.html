@@ -1,1 +1,11 @@
-<h1> Principal systems webpage</h1>
+
+
+{% extends "_layouts/base.html" %}
+{% load url from future %}
+
+{% block page_content %}
+<div class="row-fluid">
+	<h1> Principal systems webpage</h1>
+    <a href="{% url 'whitepaper:list' %}" class="btn">Welcome to PSL best practice Documentation</a>
+</div>
+{% endblock %}
